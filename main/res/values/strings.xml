@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Guia de Cinemas</string>
-    <string name="title_activity_lista_cinemas">Cinemas</string>
-    <string name="title_activity_lista_filmes">Filmes</string>
-    <string name="title_activity_lista_salas">Salas</string>
-    <string name="title_activity_detalhes_cinema">Cinema</string>
-    <string name="title_activity_detalhes_filme">Filme</string>
-    <string name="title_activity_detalhes_sala">Sala</string>
-</resources>
