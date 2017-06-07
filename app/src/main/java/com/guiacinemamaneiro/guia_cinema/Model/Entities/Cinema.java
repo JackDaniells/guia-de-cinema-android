@@ -9,6 +9,15 @@ public class Cinema implements Serializable {
     private String nome;
     private String localizacao;
 
+
+    public Cinema(String nome, String local){
+
+        this.nome = nome;
+
+        this.localizacao = local;
+
+    }
+
     //getters and setters
 
     public Sala[] getSalas() {
