@@ -13,22 +13,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:orientation="vertical"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <TextView
             android:id="@+id/form_cadastro_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
             android:text="Cadastro"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="000"
+            android:textSize="30sp" />
 
         <LinearLayout
             android:id="@+id/nome_fields"
             android:layout_width="match_parent"
-            android:layout_height="33dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_weight="0.04"
             android:orientation="horizontal">
 
@@ -43,10 +49,10 @@
                 android:id="@+id/nome_placeholder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.08"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Digite o seu nome"
-                android:layout_weight="0.08" />
+                android:text="Digite o seu nome" />
 
         </LinearLayout>
 
@@ -54,6 +60,7 @@
             android:id="@+id/email_fields"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -77,7 +84,8 @@
         <LinearLayout
             android:id="@+id/login_fields"
             android:layout_width="match_parent"
-            android:layout_height="64dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -101,7 +109,8 @@
         <LinearLayout
             android:id="@+id/senha_fields"
             android:layout_width="match_parent"
-            android:layout_height="66dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -125,6 +134,7 @@
             android:id="@+id/confirmacaoSenha_fields"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -146,8 +156,10 @@
 
         <Button
             android:id="@+id/cadastro_button"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:text="Cadastrar" />
 
     </LinearLayout>
