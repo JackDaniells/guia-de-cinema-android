@@ -25,7 +25,7 @@ public class ListaSalasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_filmes);
 
-        listViewSala = (ListView) findViewById(R.id.lista_filme);
+        listViewSala = (ListView) findViewById(R.id.view_lista_filme);
 
         listaSala = new ArrayList<>();
         Sala s = new Sala();

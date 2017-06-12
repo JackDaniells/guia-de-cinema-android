@@ -4,6 +4,20 @@ import java.io.Serializable;
 
 public class Filme implements Serializable {
 
+    public Filme(){}
+
+    public Filme(String titulo, String diretor, String[] elenco, String poster, String sinopse, int duracao, boolean legendado, String trailer, String genero) {
+        this.titulo = titulo;
+        this.diretor = diretor;
+        this.elenco = elenco;
+        this.poster = poster;
+        this.sinopse = sinopse;
+        this.duracao = duracao;
+        this.legendado = legendado;
+        this.trailer = trailer;
+        this.genero = genero;
+    }
+
     //título original, diretor, elenco, pôster do filme, sinopse, duração, salas e horários das sessões, se é dublado ou legendado,
 
     private String titulo;
@@ -87,5 +101,10 @@ public class Filme implements Serializable {
 
     public void setLegendado(boolean legendado) {
         this.legendado = legendado;
+    }
+
+    @Override
+    public String toString() {
+        return getTitulo() + "\n" + getGenero();
     }
 }

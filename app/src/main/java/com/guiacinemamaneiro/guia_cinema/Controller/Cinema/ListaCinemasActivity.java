@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.guiacinemamaneiro.guia_cinema.Model.Entities.Cinema;
+import com.guiacinemamaneiro.guia_cinema.Model.Entities.Sala;
 import com.guiacinemamaneiro.guia_cinema.R;
 
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ public class ListaCinemasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_cinemas);
 
-        listaCinema = (ListView)findViewById(R.id.lista_cinema);
+        listaCinema = (ListView)findViewById(R.id.list_view_cinemas);
 
         buscaCinemas();
 
@@ -50,6 +51,17 @@ public class ListaCinemasActivity extends AppCompatActivity {
     private void buscaCinemas(){
         cinemas = new ArrayList<>();
 
+
+        Sala[] s = new Sala[1];
+        s[0] = new Sala();
+
+
+        Cinema c = new Cinema(s,"Iguatemi",-27.5900291, -48.5161127, "https://aovivonaweb.tv/uploaded/files/blog/56537e10abfd49c270b8f5fc/Interno_SalaCinema-2.jpg");
+        Cinema c2 = new Cinema(s,"Beira Mar Shopping", -27.5542414,-48.5004699, "https://aovivonaweb.tv/uploaded/files/blog/56537e10abfd49c270b8f5fc/Interno_SalaCinema-2.jpg");
+        Cinema c3 = new Cinema(s,"Floripa Shopping", -27.5846722,-48.5472427, "https://aovivonaweb.tv/uploaded/files/blog/56537e10abfd49c270b8f5fc/Interno_SalaCinema-2.jpg");
+        cinemas.add(c);
+        cinemas.add(c2);
+        cinemas.add(c3);
         //TODO: Retornar os cinemas
     }
 }

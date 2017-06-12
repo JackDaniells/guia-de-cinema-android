@@ -1,5 +1,6 @@
 package com.guiacinemamaneiro.guia_cinema.Controller.Filme;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -23,6 +24,7 @@ import java.io.InputStream;
 
 import static com.guiacinemamaneiro.guia_cinema.Controller.Cinema.ListaCinemasActivity.NOME_CAMPO_CINEMA;
 import static com.guiacinemamaneiro.guia_cinema.Controller.Filme.ListaFilmesActivity.NOME_CAMPO_FILME;
+import static com.guiacinemamaneiro.guia_cinema.Controller.Usuario.LoginUsuarioActivity.usuarioLogado;
 
 public class DetalhesFilmeActivity extends AppCompatActivity {
 
@@ -39,11 +41,8 @@ public class DetalhesFilmeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalhes_filme);
 
-        trailer = (VideoView)findViewById(R.id.videoViewTrailer);
-
-        btnVoltar= (Button)findViewById(R.id.buttonVoltarDetalhesFilme);
-        btnTrailer= (Button)findViewById(R.id.buttonFavoritar);
-        btnFavorito= (Button)findViewById(R.id.ButtonVerTrailerFilme);
+        btnTrailer= (Button)findViewById(R.id.ButtonVerTrailerFilme);
+        btnFavorito= (Button)findViewById(R.id.buttonFavoritar);
         poster = (ImageView)findViewById(R.id.imageViewBannerFilme);
         titulo = (TextView)findViewById(R.id.textViewTituloFilme);
         duracao = (TextView)findViewById(R.id.textViewDuracaoFilme);
@@ -52,7 +51,6 @@ public class DetalhesFilmeActivity extends AppCompatActivity {
         sinopse = (TextView)findViewById(R.id.textViewSinopseFilme);
         diretor = (TextView)findViewById(R.id.textViewDiretorFilme);
         telaPrincipal = (LinearLayout)findViewById(R.id.layout_detalhes_filme);
-        telaPrincipal = (LinearLayout)findViewById(R.id.layout_trailer);
 
 
         //pega o cinema enviado pela activity ListaCinemas
@@ -81,8 +79,6 @@ public class DetalhesFilmeActivity extends AppCompatActivity {
         btnTrailer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                telaPrincipal.setVisibility(View.GONE);
-                telaTrailer.setVisibility(View.VISIBLE);
                 passarVideoYoutube(filme.getTrailer());
             }
         });
@@ -100,12 +96,7 @@ public class DetalhesFilmeActivity extends AppCompatActivity {
 
     //exibe o video no VideoView
     private void passarVideoYoutube(String videoURL){
-
-        MediaController mc = new MediaController(this);
-        trailer.setVideoURI(Uri.parse(videoURL));
-        trailer.setMediaController(new MediaController(this)); //sets MediaController in the video view
-        trailer.requestFocus();//give focus to a specific view
-        trailer.start();//starts the video
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(filme.getTrailer())));
     }
 
 
