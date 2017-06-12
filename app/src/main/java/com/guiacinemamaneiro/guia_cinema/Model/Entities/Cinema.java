@@ -7,14 +7,41 @@ public class Cinema implements Serializable {
 
     private Sala[] salas;
     private String nome;
-    private String localizacao;
+    private double latitude;
+    private double longitude;
+    private String foto;
 
+    public double getLatitude() {
+        return latitude;
+    }
 
-    public Cinema(String nome, String local){
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
+
+    public Cinema(String nome, double latitude, double longitude){
 
         this.nome = nome;
 
-        this.localizacao = local;
+        this.latitude = latitude;
+
+        this.longitude = longitude;
 
     }
 
@@ -36,11 +63,4 @@ public class Cinema implements Serializable {
         this.nome = nome;
     }
 
-    public String getLocalizacao() {
-        return localizacao;
-    }
-
-    public void setLocalizacao(String localizacao) {
-        this.localizacao = localizacao;
-    }
 }

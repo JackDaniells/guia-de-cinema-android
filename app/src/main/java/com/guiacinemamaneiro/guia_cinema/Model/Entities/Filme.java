@@ -14,7 +14,15 @@ public class Filme implements Serializable {
     private int duracao;
     private boolean legendado;
     private String trailer;
+    private String genero;
 
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
     //getters and setters
 
     public String getTrailer() {

@@ -124,6 +124,12 @@
                 android:layout_height="wrap_content"
                 android:text="Ver Trailer" />
 
+            <Button
+                android:id="@+id/buttonFavoritar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Favoritar" />
+
         </LinearLayout>
     </LinearLayout>
 
@@ -133,7 +139,7 @@
         android:layout_height="432dp"
         android:layout_gravity="right"
         android:layout_weight="0.63"
-        android:background="000"
+        android:background="#000"
         android:baselineAligned="false"
         android:elevation="@dimen/abc_action_bar_overflow_padding_end_material"
         android:orientation="vertical"

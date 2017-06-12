@@ -14,14 +14,14 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewFotoCinema"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srcCompat="@android:color/background_light"
-        android:layout_weight="1"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        app:srcCompat="@android:color/background_light" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,21 +40,18 @@
                 android:id="@+id/textViewNomeCinema"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
                 android:text="Cinema:"
+                android:layout_weight="1"
                 android:textAlignment="center"
-                android:textColor="000"
+                android:textColor="#000"
                 android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/textViewLocalizacaoCinema"
+            <Button
+                android:id="@+id/buttonVerMapa"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:text="Localizacao:"
-                android:textAlignment="center"
-                android:textColor="000"
-                android:textSize="24sp" />
+                android:text="Mapa" />
 
         </LinearLayout>
 
@@ -66,10 +63,10 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/buttonVerFilmes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ver no Mapa" />
+                android:text="Ver Filmes" />
         </LinearLayout>
 
     </LinearLayout>

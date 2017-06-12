@@ -1,5 +1,6 @@
 package com.guiacinemamaneiro.guia_cinema.Controller.Cinema;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,8 +16,10 @@ import java.util.ArrayList;
 public class ListaCinemasActivity extends AppCompatActivity {
 
     ListView listaCinema;
-    ArrayList cinemas;
+    ArrayList<Cinema>  cinemas;
     ArrayAdapter<Cinema> adaptador;
+
+    public static final String NOME_CAMPO_CINEMA = "CINEMA";
 
 
     @Override
@@ -26,11 +29,7 @@ public class ListaCinemasActivity extends AppCompatActivity {
 
         listaCinema = (ListView)findViewById(R.id.lista_cinema);
 
-
-        cinemas = new ArrayList<>();
-        Cinema c = new Cinema("Teste", "1");
-        cinemas.add(c);
-
+        buscaCinemas();
 
         adaptador = new ArrayAdapter<>(ListaCinemasActivity.this, android.R.layout.simple_list_item_1, cinemas);
         listaCinema.setAdapter(adaptador);
@@ -39,10 +38,18 @@ public class ListaCinemasActivity extends AppCompatActivity {
         listaCinema.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //TODO
+                Intent i = new Intent(ListaCinemasActivity.this, DetalhesCinemaActivity.class);
+                i.putExtra(NOME_CAMPO_CINEMA ,cinemas.get(position));
+                startActivity(i);
             }
         });
 
 
+    }
+
+    private void buscaCinemas(){
+        cinemas = new ArrayList<>();
+
+        //TODO: Retornar os cinemas
     }
 }

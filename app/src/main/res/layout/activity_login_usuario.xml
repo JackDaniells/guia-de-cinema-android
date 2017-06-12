@@ -32,54 +32,66 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/linearLayout"
         android:layout_margin="30dp"
-        android:layout_height="500px">
+        android:orientation="vertical">
 
         <TextView
-            android:text="Login:"
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView3"
+            android:text="Login:"
             android:textColor="@android:color/background_dark" />
 
         <EditText
+            android:id="@+id/editText3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText3" />
+            android:inputType="textPersonName" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="50px" />
 
         <TextView
-            android:text="Senha:"
+            android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView4"
+            android:text="Senha:"
             android:textColor="@android:color/background_dark" />
 
         <EditText
+            android:id="@+id/editText4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
             android:ems="10"
-            android:id="@+id/editText4" />
+            android:inputType="textPassword" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="50px" />
 
         <Button
-            android:text="Button"
+            android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button" />
+            android:text="Entrar" />
+
+        <TextView
+            android:id="@+id/textViewCadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Cadastrar"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
     </LinearLayout>
+
 </LinearLayout>
