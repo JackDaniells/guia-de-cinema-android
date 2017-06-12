@@ -74,7 +74,7 @@ public class ListaFilmesActivity extends AppCompatActivity {
                 "Zack Snyder",
                 atoresBatman,
                 "https://images-na.ssl-images-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
-                "Fearing that the actions of Superman are left unchecked, Batman takes on the Man of Steel, while the world wrestles with what kind of a hero it really needs. ",
+                "O confronto entre Superman (Henry Cavill) e Zod (Michael Shannon) em Metrópolis fez com que a população mundial se dividisse acerca da existência de extra-terrestres na Terra. Enquanto muitos consideram o Superman como um novo deus, há aqueles que consideram extremamente perigoso que haja um ser tão poderoso sem qualquer tipo de controle. Bruce Wayne (Ben Affleck) é um dos que acreditam nesta segunda hipótese. Sob o manto de um Batman violento e obcecado, ele investiga o laboratório de Lex Luthor (Jesse Eisenberg), que descobriu uma pedra verde que consegue eliminar e enfraquecer os filhos de Krypton. ",
                 151,
                 true,
                 "https://www.youtube.com/embed/IHDgrNxO-5I",
@@ -89,11 +89,11 @@ public class ListaFilmesActivity extends AppCompatActivity {
         atoresHomiArania[2] = "Martin Starr";
 
         Filme homi_arania = new Filme(
-                "Homem Aranha - De volta ao Lar",
+                "Homem Aranha",
                 " Jon Watts ",
                 atoresHomiArania,
                 "https://images-na.ssl-images-amazon.com/images/M/MV5BNTk4ODQ1MzgzNl5BMl5BanBnXkFtZTgwMTMyMzM4MTI@._V1_UX182_CR0,0,182,268_AL_.jpg ",
-                "Following the events of Capitain America: Guerra Civil (2016), Peter Parker attempts to balance his life in high school with his career as the web-slinging superhero Spider-Man. ",
+                "Depois de atuar ao lado dos Vingadores, chegou a hora do pequeno Peter Parker (Tom Holland) voltar para casa e para a sua vida, já não mais tão normal. Lutando diariamente contra pequenos crimes nas redondezas, ele pensa ter encontrado a missão de sua vida quando o terrível vilão Abutre (Michael Keaton) surge amedrontando a cidade. O problema é que a tarefa não será tão fácil como ele imaginava.",
                 200,
                 true,
                 "https://www.youtube.com/watch?v=5U4rsRADlmo",
@@ -108,11 +108,11 @@ public class ListaFilmesActivity extends AppCompatActivity {
         atorasFestaDaSalsicha[2] = "Jonah Hill";
 
         Filme festa_da_salsicha = new Filme(
-                "Homem Aranha - De volta ao Lar",
+                "Festa da Salsicha",
                 " Greg Tiernan, Conrad Vernon ",
                 atoresHomiArania,
                 "https://images-na.ssl-images-amazon.com/images/M/MV5BMjkxOTk1MzY4MF5BMl5BanBnXkFtZTgwODQzOTU5ODE@._V1_UX182_CR0,0,182,268_AL_.jpg",
-                "A sausage strives to discover the truth about his existence.",
+                "Dentro de um supermercado, os alimentos pensam que as pessoas são deuses. Eles sonham em serem escolhidos por elas e serem levados para suas casas, onde pensam que viverão felizes. Mas eles nem suspeitam que serão cortados, ralados, cozidos e devorados! Quando Frank, uma salsicha, descobre a terrível verdade, ele precisa convencer os outros alimentos do supermecado  e fazer com que eles lutem contra os humanos. ",
                 89,
                 true,
                 "https://www.youtube.com/watch?v=FNP0N_QcfFU",
