@@ -11,9 +11,11 @@ import android.util.Log;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.MediaController;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -24,17 +26,17 @@ import java.io.InputStream;
 
 import static com.guiacinemamaneiro.guia_cinema.Controller.Cinema.ListaCinemasActivity.NOME_CAMPO_CINEMA;
 import static com.guiacinemamaneiro.guia_cinema.Controller.Filme.ListaFilmesActivity.NOME_CAMPO_FILME;
-import static com.guiacinemamaneiro.guia_cinema.Controller.Usuario.LoginUsuarioActivity.usuarioLogado;
 
 public class DetalhesFilmeActivity extends AppCompatActivity {
 
     private Filme filme;
 
-    Button btnTrailer, btnVoltar, btnFavorito;
+    Button btnTrailer;
     TextView titulo, duracao, genero, elenco, sinopse, diretor;
     ImageView poster;
     VideoView trailer;
     LinearLayout telaPrincipal, telaTrailer;
+    Switch favorito;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +44,6 @@ public class DetalhesFilmeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detalhes_filme);
 
         btnTrailer= (Button)findViewById(R.id.ButtonVerTrailerFilme);
-        btnFavorito= (Button)findViewById(R.id.buttonFavoritar);
         poster = (ImageView)findViewById(R.id.imageViewBannerFilme);
         titulo = (TextView)findViewById(R.id.textViewTituloFilme);
         duracao = (TextView)findViewById(R.id.textViewDuracaoFilme);
@@ -51,6 +52,9 @@ public class DetalhesFilmeActivity extends AppCompatActivity {
         sinopse = (TextView)findViewById(R.id.textViewSinopseFilme);
         diretor = (TextView)findViewById(R.id.textViewDiretorFilme);
         telaPrincipal = (LinearLayout)findViewById(R.id.layout_detalhes_filme);
+        favorito = (Switch)findViewById(R.id.switchFavorito);
+
+
 
 
         //pega o cinema enviado pela activity ListaCinemas
@@ -69,11 +73,20 @@ public class DetalhesFilmeActivity extends AppCompatActivity {
             }
             atores.substring(0, atores.length() - 2);
             elenco.setText(atores);
+            if(filme.isFavorito())favorito.setChecked(true);
+
+
 
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+        favorito.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                filme.setFavorito(isChecked);
+            }
+        });
 
         //ver trailer
         btnTrailer.setOnClickListener(new View.OnClickListener() {
@@ -84,12 +97,6 @@ public class DetalhesFilmeActivity extends AppCompatActivity {
         });
 
         //voltar para a tela de detalhes
-        btnFavorito.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                favoritarFilme(filme);
-            }
-        });
 
     }
 

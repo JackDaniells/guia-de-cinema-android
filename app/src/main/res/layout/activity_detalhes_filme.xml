@@ -107,6 +107,7 @@
                     android:layout_weight="1"
                     android:text="Genero"
                     android:textColor="#000" />
+
             </LinearLayout>
 
             <TextView
@@ -130,19 +131,20 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
+                <Switch
+                    android:id="@+id/switchFavorito"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Favorito"
+                    android:textSize="18sp" />
+
                 <Button
                     android:id="@+id/ButtonVerTrailerFilme"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Ver Trailer" />
-
-                <Button
-                    android:id="@+id/buttonFavoritar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Favoritar" />
 
             </LinearLayout>
 
